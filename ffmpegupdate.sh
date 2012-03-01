@@ -307,7 +307,7 @@ update_check ()
 {
 echo "Checking for new version"
 cd $INSTALL
-wget http://x264-ffmpeg-up-to-date.googlecode.com/files/ffmpegversion.txt 2>> $LOG >> $LOG
+wget https://github.com/pruperting/x264-ffmpeg-up-to-date/raw/master/ffmpegversion.txt 2>> $LOG >> $LOG
 source ffmpegversion.txt 2>> $LOG >> $LOG
 if [ "$CURRENT" -gt "$VERSION" ]; then
 	echo "There is a newer version of the script, updating to version $CURRENT"
@@ -318,11 +318,11 @@ if [ "$CURRENT" -gt "$VERSION" ]; then
 	echo "killall ffmpegupdate.sh" >> updateffmpegupdate.sh
 	echo "cd $INSTALL" >> updateffmpegupdate.sh
 	echo "rm ffmpegupdate.sh" >> updateffmpegupdate.sh
-	echo "wget http://x264-ffmpeg-up-to-date.googlecode.com/files/ffmpegupdate$CURRENT.sh" >> updateffmpegupdate.sh
-	echo "chmod a+x ffmpegupdate$CURRENT.sh" >> updateffmpegupdate.sh
+	echo "wget https://github.com/pruperting/x264-ffmpeg-up-to-date/raw/master/ffmpegupdate.sh" >> updateffmpegupdate.sh
+	echo "chmod a+x ffmpegupdate.sh" >> updateffmpegupdate.sh
 	echo "echo ""ffmpegupdate.sh updated""" >> updateffmpegupdate.sh
 	echo "echo "You have been updated to the latest version."" >> updateffmpegupdate.sh
-	echo "echo "The new script can be found at "$INSTALL/ffmpegupdate$CURRENT.sh""" >> updateffmpegupdate.sh
+	echo "echo "The new script can be found at "$INSTALL/ffmpegupdate.sh""" >> updateffmpegupdate.sh
 	echo "echo "The Changelog is "" >> updateffmpegupdate.sh
 	echo "echo "$CHANGELOG"" >> updateffmpegupdate.sh
 	echo "echo "Update check complete."" >> updateffmpegupdate.sh
