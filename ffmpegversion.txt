@@ -1,2 +1,2 @@
-CURRENT=9
-CHANGELOG="Version 9. 1st March 2012 added support for Oneiric. Removed support for Hardy - supporting old distros becoming too complex. Script now supports Oneiric, Natty and Maverick only, sorry"
+CURRENT=10
+CHANGELOG="Version 10. 30th April 2012 added support for Precise"
